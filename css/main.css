@@ -1,0 +1,167 @@
+/*
+ * Template Name: H5UI - Simple Frame For Html5 Page
+ * Version: 0.9.0
+ * Author: Leon Cui
+ * Website: http://www.ccui.cc
+ *
+ * 1.0 @Home
+ * 2.0 @Page
+ *   2.1 @Page-sign
+ *   2.2 @Page-sign-state
+ *        
+ */
+
+/* 1.0 @Home */
+
+.home-flash img{
+	display: block;
+}
+.home-function{
+	margin-bottom: 20px;
+}
+.home-function .btn i{
+	font-size: 30px;
+	display: block;
+	margin-bottom: 10px;
+}
+.home-title{
+	padding: 15px;
+	background: #fff;
+	font-weight: 700;
+	border-bottom: 1px solid #f0f0f2;
+}
+.home-list{
+	text-align: center;
+	padding-bottom: 60px;
+}
+.home-list ul,
+.home-list li{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.home-list li{
+	padding: 20px 0;
+	border-bottom: 1px solid #ddd;
+	background: #fff;
+	cursor: pointer;
+}
+.home-list li input[type="radio"]{
+	margin-right: 5px;
+}
+.home-list li:hover, 
+.home-list li:focus, 
+.home-list li:active, 
+.home-list li.active{
+	background: #f0f0f2;
+}
+.home-list .fixed-bottom{
+	width: 100%;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	height: 60px;
+}
+.home-list .fixed-bottom .btn{
+	width: 50%;
+	float: left;
+	padding: 0;
+	height: 60px;
+	line-height: 60px;
+	font-weight: 500;
+}
+
+/* 2.1 @Page-sign */
+
+.page-time{
+	padding: 20px 0;
+	background: #02b4e7;
+	text-align: center;
+	color: #fff;
+	font-weight: 500;
+}
+.page-venue{
+	background: #f0f0f2;
+	padding: 30px 0;
+	text-align: center;
+}
+.page-venue i{
+	border-radius: 60px;
+  color: #fff;
+  font-size: 25px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  width: 60px;
+  background: #d7d7d7;
+}
+.page-venue p{
+	margin: 10px 0 0 0;
+}
+.page-venue a:hover i, 
+.page-venue a:focus i, 
+.page-venue a:active i, 
+.page-venue a.active i{
+	background: #4fd2c4;
+}
+.page-sign{
+	margin-bottom: 60px;
+	background: #fff;
+}
+.page-sign .wq-img{
+	width: 68px;
+	height: 68px;
+	border-radius: 68px;
+	display: inline-block;
+	float: left;
+}
+.page-sign .sign-name{
+	height: 68px;
+	line-height: 68px;
+	margin-left: 10px;
+	display: inline-block;
+}
+.fixed-bottom{
+	width: 100%;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	height: 60px;
+}
+.fixed-bottom .btn{
+	padding: 0;
+	height: 60px;
+	line-height: 60px;
+	font-weight: 500;
+}
+
+/* 2.2 @Page-sign-state */
+
+.page-state{
+	text-align: center;
+	padding-bottom: 60px;
+}
+.page-state i{
+	border-radius: 100px;
+  color: #fff;
+  font-size: 60px;
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+  width: 100px;
+  margin-top: -100px;
+}
+.page-state .txt-tips{
+	padding: 0 30px;
+	text-align: left;
+	line-height: 24px;
+	color: #666;
+	font-weight: 500;
+
+}
+.page-state i.fa-check{
+	background: #02b4e7;
+}
+.page-state i.fa-info{
+	background: #f59b18;
+}
