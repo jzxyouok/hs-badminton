@@ -1,7 +1,17 @@
 ;(function () {
+
+  //测试环境
+  //***********************************************
+  var prefix = "http://192.168.46.19:8080/client/";
+  var user = {
+    userId:"10555",
+    weixinId:"10555",
+    phone:"123456789101",
+  };
+  //***********************************************
+
+
   app.service('API',function ($http) {
-    
-    
     /**
      * 获取可以预约的时间段
      * @param  {Function} callback 成功回调
@@ -17,8 +27,10 @@
      * @param  {Function} callback 回调
      * @return none
      */
-    this.book=function(params,callback){
-      _execute("submitSignUp",params,callback);
+    this.book=function(signUpId,callback){
+      _execute("submitSignUp",angular.extend({
+        signUpId:signUpId
+      },user),callback);
     }
 
     /**
@@ -27,8 +39,10 @@
      * @param  {Function} callback 回调
      * @return none
      */
-    this.sign=function(params,callback){
-      _execute("submitSignIn",params,callback);
+    this.sign=function(callback){
+      _execute("submitSignIn",{
+        userId:user.userId
+      },callback);
     }
 
     /**
@@ -37,8 +51,10 @@
      * @param  {Function} callback 回调
      * @return none
      */
-    this.queryResult=function(params,callback){
-      _execute("searchSignUp",params,callback);
+    this.queryResult=function(callback){
+      _execute("searchSignUp",{
+        userId:user.userId
+      },callback);
     }
 
     /**
@@ -57,12 +73,12 @@
      * @param  {Function} callback 回调
      * @return none
      */
-    this.cancelSignUp=function(params,callback){
-      _execute("cancelSignUp",params,callback);
+    this.cancelSignUp=function(callback){
+      _execute("cancelSignUp",{
+        userId:user.userId
+      },callback);
     }
 
-
-    var prefix = "http://192.168.46.19:8080/client/";
     function _execute(func,params,callback){
       $http({
         method:'GET',

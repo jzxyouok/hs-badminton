@@ -7,6 +7,10 @@
                 controller: 'index',
                 templateUrl: 'views/index.html'
             })
+            .when('/sign', {
+                controller: 'sign',
+                templateUrl: 'views/sign.html'
+            })
             .otherwise({
                 redirectTo: '/'
             });

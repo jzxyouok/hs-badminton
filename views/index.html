@@ -2,7 +2,7 @@
 <div class="home-function">
   <div class="container12">
     <div class="grid4">
-      <button class="btn"><i class="fa fa-calendar-check-o"></i>场馆签到</button>
+      <button class="btn" ng-click="sign()"><i class="fa fa-calendar-check-o"></i>场馆签到</button>
     </div>
     <div class="grid4">
       <button class="btn btn-primary"><i class="fa fa-search"></i>预定查询</button>
@@ -20,7 +20,7 @@
     <li ng-repeat="time in times" ng-click="chooseTime(time)"><input type="radio" apply-type="{{time.applyType}}" ng-checked="choose.id==time.id" value="{{time.id}}" name="optionsRadios">{{time.desc}}</li>
   </ul>
   <div class="fixed-bottom">
-    <button class="btn btn-default" ng-click="choose=null;" ng-class="{'btn-primary':choose!=null}">清楚已选</button>
+    <button class="btn btn-default" ng-click="choose=null;" ng-class="{'btn-primary':choose!=null}">清除已选</button>
     <button class="btn btn-primary" ng-click="book(choose)">预定</button>
   </div>
 </form>
