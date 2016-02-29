@@ -430,8 +430,8 @@ textarea {
 .btn:focus, 
 .btn:active, 
 .btn.active{
-  background: #01deff;
-  color: #fff;
+  /*background: #01deff;
+  color: #fff;*/
 }
 .btn-default{
   background:#b4b4b4;

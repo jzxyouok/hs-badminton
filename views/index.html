@@ -13,17 +13,14 @@
   </div>
 </div>
 <div class="home-title">
-  <span class="f-fr s-color-blue">2月8日 星期二</span>预定时间列表
+  <span class="f-fr s-color-blue">{{today|date:'MM月dd日 EEEE'}}</span>预定时间列表
 </div>
 <form class="home-list">
   <ul>
-    <li><input type="radio" checked="" value="option1" name="optionsRadios">17:30 - 18:30</li>
-    <li><input type="radio" value="option2" name="optionsRadios">18:30 - 19:30</li>
-    <li><input type="radio" value="option3" name="optionsRadios">19:30 - 20:30</li>
-    <li><input type="radio" value="option4" name="optionsRadios">20:30 - 21:30</li>
+    <li ng-repeat="time in times" ng-click="chooseTime(time)"><input type="radio" apply-type="{{time.applyType}}" ng-checked="choose.id==time.id" value="{{time.id}}" name="optionsRadios">{{time.desc}}</li>
   </ul>
   <div class="fixed-bottom">
-    <button class="btn btn-default">清楚已选</button>
-    <button class="btn btn-primary">预定</button>
+    <button class="btn btn-default" ng-click="choose=null;" ng-class="{'btn-primary':choose!=null}">清楚已选</button>
+    <button class="btn btn-primary" ng-click="book(choose)">预定</button>
   </div>
 </form>
