@@ -1,5 +1,5 @@
 ;(function(){
-    var app = angular.module('hspingpang', ['ngRoute'])
+    var app = angular.module('hsymq', ['ngRoute'])
 
     app.config(function ($routeProvider){
         $routeProvider
