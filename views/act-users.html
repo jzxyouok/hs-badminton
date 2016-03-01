@@ -13,29 +13,9 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td><span class="sign-name">曹卉娟</span><img src="images/wx-img.png" alt="" class="wq-img"></td>
-        <td><span class="s-color-green">已签到</span></td>
-      </tr>
-      <tr>
-        <td><span class="sign-name">曹卉娟</span><img src="images/wx-img.png" alt="" class="wq-img"></td>
-        <td>未签到</td>
-      </tr>
-      <tr>
-        <td><span class="sign-name">曹卉娟</span><img src="images/wx-img.png" alt="" class="wq-img"></td>
-        <td><span class="s-color-green">已签到</span></td>
-      </tr>
-      <tr>
-        <td><span class="sign-name">曹卉娟</span><img src="images/wx-img.png" alt="" class="wq-img"></td>
-        <td>未签到</td>
-      </tr>
-      <tr>
-        <td><span class="sign-name">曹卉娟</span><img src="images/wx-img.png" alt="" class="wq-img"></td>
-        <td><span class="s-color-green">已签到</span></td>
-      </tr>
-      <tr>
-        <td><span class="sign-name">曹卉娟</span><img src="images/wx-img.png" alt="" class="wq-img"></td>
-        <td>未签到</td>
+      <tr ng-repeat="user in data.data">
+        <td><span class="sign-name">{{user.userName}}</span><img src="images/wx-img.png" alt="" class="wq-img"></td>
+        <td><span class="s-color-green">{{user.signIn}}</span></td>
       </tr>
     </tbody>
   </table>
