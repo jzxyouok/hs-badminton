@@ -63,8 +63,10 @@
      * @param  {Function} callback 回调
      * @return none
      */
-    this.getActivitieUsers=function(params,callback){
-      _execute("searchSignUp",params,callback);
+    this.getActivitieUsers=function(placeNo,callback){
+      _execute("getActivitieUsers",{
+        placeNo:placeNo
+      },callback);
     }
 
     /**
