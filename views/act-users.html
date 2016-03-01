@@ -1,14 +1,11 @@
-<div class="page-time">时段 18:30 - 19:30</div>
+<div class="page-time">时段 {{acts.time}}</div>
 <div class="page-venue">
   <div class="container12">
-    <div class="grid3"><a href="#" class="active"><i class="fa fa-reddit-alien"></i><p>1号场</p></a></div>
-    <div class="grid3"><a href="#"><i class="fa fa-modx"></i><p>2号场</p></a></div>
-    <div class="grid3"><a href="#"><i class="fa fa-mortar-board"></i><p>3号场</p></a></div>
-    <div class="grid3"><a href="#"><i class="fa fa-rocket"></i><p>4号场</p></a></div>
+    <div class="grid3" ng-click="choosePlace(i)" ng-repeat="i in [1,2,3,4]"><a ng-href="" ng-class="{'active':tab==i}"><i class="fa fa-reddit-alien"></i><p>{{i}}号场</p></a></div>
   </div>
 </div>
 <div class="page-sign">
-  <table class="table table-bordered">
+  <table class="table table-bordered" ng-show="acts.data.length>0">
     <thead>
       <tr>
         <th>人员</th>
@@ -42,6 +39,9 @@
       </tr>
     </tbody>
   </table>
+  <div ng-show="acts.data.length==0">
+    暂无信息!
+  </div>
 </div>
 <div class="fixed-bottom">
   <button class="btn btn-default" ng-click="index()">返回</button>

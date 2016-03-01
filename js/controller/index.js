@@ -10,7 +10,7 @@
      * 跳转到活动列表页面
      */
     $scope.actUsers=function(){
-     window.location.href='#act-users';
+     window.location.href='#act-users/1';
     }
 
     /**
@@ -25,11 +25,11 @@
       if($scope.today.getTime()-now.getTime()>0){
         //sign
         //
-        API.sign(function(){
-          window.location.href='#sign-success';
+        API.sign(function(data){
+          window.location.href='#sign-success/'+data.return_msg;
         })
       }else{
-        window.location.href='#sign-notbegin';
+        window.location.href='#sign-notbegin/'+"您的活动时间未开始,请稍后签到!";
       }
     }
 
@@ -73,9 +73,13 @@
          * 预订
          */
         $scope.book=function(time){
-          API.book(time.id,function(data){
-            window.location.reload();
-          })
+          if(time){
+            API.book(time.id,function(data){
+              window.location.reload();
+            })
+          }else{
+            alert("请选择一个时间段后再提交!");
+          }
         }
       }
     });
