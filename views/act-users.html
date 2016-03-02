@@ -13,16 +13,16 @@
       </tr>
     </thead>
     <tbody>
-      <tr ng-repeat="user in data.data">
-        <td><span class="sign-name">{{user.userName}}</span><img src="images/wx-img.png" alt="" class="wq-img"></td>
+      <tr ng-repeat="user in acts.data">
+        <td><i class="user-icon">{{user.userName[0]}}</i><span class="sign-name">{{user.userName}}</span></td>
         <td><span class="s-color-green">{{user.signIn}}</span></td>
       </tr>
     </tbody>
   </table>
-  <div ng-show="acts.data.length==0">
+  <div class="no-data" ng-show="acts.data.length==0">
     暂无信息!
   </div>
 </div>
 <div class="fixed-bottom">
-  <button class="btn btn-default" ng-click="index()">返回</button>
+  <button class="btn btn-primary" ng-click="index()">返回</button>
 </div>

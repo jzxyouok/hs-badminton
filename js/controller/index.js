@@ -5,6 +5,7 @@
     //根据访客进入的时间判断是否显示预订界面 //
     ////////////////////////
     $scope.today=new Date();
+    $scope.daysOfWeek=$scope.today.getDay()==0?7:$scope.today.getDay();
 
     /**
      * 跳转到活动列表页面
@@ -50,7 +51,8 @@
            */
           $scope.cancelSignUp=function(){
             API.cancelSignUp(function(data){
-              window.location.reload();
+              window.location.href="#/?redo"
+
               alert("您的报名已经取消,可以重新开始预订了.");
             })
           }
@@ -75,7 +77,7 @@
         $scope.book=function(time){
           if(time){
             API.book(time.id,function(data){
-              window.location.reload();
+              window.location.href="#/?done"
             })
           }else{
             alert("请选择一个时间段后再提交!");

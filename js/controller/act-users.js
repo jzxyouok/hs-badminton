@@ -6,12 +6,14 @@
     }
 
     $scope.choosePlace=function(placeNo){
-      $scope.tab=placeNo;
-      API.getActivitieUsers($routeParams.placeNo,function(data){
-        $scope.acts=data;
-      })
+      window.location.href="#/act-users/"+placeNo;
     }
 
-    $scope.choosePlace($routeParams.placeNo);
+    var placeNo = $routeParams.placeNo;
+    
+    $scope.tab=placeNo;
+    API.getActivitieUsers(placeNo,function(data){
+      $scope.acts=data;
+    })
   });
 })();

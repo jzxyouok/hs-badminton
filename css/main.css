@@ -71,6 +71,10 @@
 	font-weight: 500;
 }
 
+.home-list .fixed-bottom .btn:first-child{
+	border-right: 1px #fff solid;
+}
+
 /* 2.1 @Page-sign */
 
 .page-time{
@@ -164,4 +168,27 @@
 }
 .page-state i.fa-info{
 	background: #f59b18;
+}
+
+button[disabled],button[disabled]:hover, button[disabled]:focus, button[disabled]:active, button[disabled].active {
+	background: #b4b4b4;
+}
+
+.bookdisable{
+	text-align: center;
+    padding-top: 30px;
+}
+
+div.no-data{
+	background: #F0F0F2;
+    border-top: 2px solid #06CDF0;
+    padding: 10px;
+}
+
+td i.user-icon {
+    background-color: #06CDF0;
+    padding: 7px;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 22px;
 }
