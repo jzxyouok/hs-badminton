@@ -37,15 +37,10 @@
     //先查询预订结果,然后判断下一步操作
     API.queryResult(function(data){
       
-      if($scope.today.getHours()>16){
+      if($scope.today.getHours()>16||data.return_msg!=""){
         $scope.bookdisable=data.return_msg;
-      }else{
-        
-        //TODO
-        //应该有一个参数与判断今天我有没有预订
-        if(data.return_msg=="您的报名已提交，请在16点后再查询结果"){
-          $scope.bookdisable=data.return_msg;
 
+        if(data.return_msg=="您的报名已提交，请在16点后再查询结果"){
           /**
            * 取消报名
            */
@@ -56,10 +51,8 @@
               alert("您的报名已经取消,可以重新开始预订了.");
             })
           }
-
-          return;
         }
-
+      }else{
         API.getAvailableTime(function(data){
           $scope.times = data.data;
         });
