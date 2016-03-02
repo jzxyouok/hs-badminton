@@ -9,6 +9,8 @@
       window.location.href="#/act-users/"+placeNo;
     }
 
+    $scope.placeIcon=['fa-reddit-alien','fa-modx','fa-mortar-board','fa-rocket'];
+
     var placeNo = $routeParams.placeNo;
     
     $scope.tab=placeNo;
