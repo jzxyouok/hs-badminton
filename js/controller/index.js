@@ -37,7 +37,7 @@
     //先查询预订结果,然后判断下一步操作
     API.queryResult(function(data){
       
-      if($scope.today.getHours()>16||data.return_msg!=""){
+      if($scope.today.getHours()>16||data.return_msg!="今天您没有报名"){
         $scope.bookdisable=data.return_msg;
 
         if(data.return_msg=="您的报名已提交，请在16点后再查询结果"){
