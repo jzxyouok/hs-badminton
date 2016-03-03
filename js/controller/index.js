@@ -18,20 +18,13 @@
      * 签到
      */
     $scope.sign=function(){
-      //如果页面访问时间在17:30之前,那么不允许签到和查看
-      //
-      var now = new Date();
-      now.setHours(17);
-      now.setMinutes(30);
-      if($scope.today.getTime()-now.getTime()>0){
-        //sign
-        //
-        API.sign(function(data){
+      API.sign(function(data){
+        if(data.return_msg=="活动未开始，请稍后再签到"){
+          window.location.href='#sign-notbegin/'+data.return_msg;
+        }else{
           window.location.href='#sign-success/'+data.return_msg;
-        })
-      }else{
-        window.location.href='#sign-notbegin/'+"您的活动时间未开始,请稍后签到!";
-      }
+        }
+      })
     }
 
     //先查询预订结果,然后判断下一步操作
