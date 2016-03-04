@@ -1,19 +1,19 @@
-<div class="page-time">时段 {{acts.time}}</div>
+<div class="page-time animated slideInDown">时段 {{acts.time}}</div>
 <div class="page-venue">
   <div class="container12">
-    <div class="grid3" ng-click="choosePlace(i)" ng-repeat="i in [1,2,3,4]"><a ng-href="" ng-class="{'active':tab==i}"><i class="fa {{placeIcon[i-1]}}"></i><p>{{i}}号场</p></a></div>
+    <div class="grid3  animated{{i}} zoomInDown" ng-click="choosePlace(i)" ng-repeat="i in [1,2,3,4]"><a ng-href="" ng-class="{'active':tab==i}"><i class="fa {{placeIcon[i-1]}}"></i><p>{{i}}号场</p></a></div>
   </div>
 </div>
 <div class="page-sign">
   <table class="table table-bordered" ng-show="acts.data.length>0">
-    <thead>
+    <thead class="animated3 slideInLeft">
       <tr>
         <th>人员</th>
         <th>签到状态</th>
       </tr>
     </thead>
     <tbody>
-      <tr ng-repeat="user in acts.data">
+      <tr class="animated{{16+$index}} slideInLeft" ng-repeat="user in acts.data">
         <td><i class="user-icon">{{user.userName[0]}}</i><span class="sign-name">{{user.userName}}</span></td>
         <td><span ng-class="{'s-color-green':user.signIn=='已签到'}">{{user.signIn}}</span></td>
       </tr>

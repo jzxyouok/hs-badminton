@@ -19,7 +19,7 @@
      */
     $scope.sign=function(){
       API.sign(function(data){
-        if(data.return_msg=="活动未开始，请稍后再签到"){
+        if(data.return_msg=="活动未开始，请稍后再签到"||data.return_msg=="您没报名或没报名成功"){
           window.location.href='#sign-notbegin/'+data.return_msg;
         }else{
           window.location.href='#sign-success/'+data.return_msg;

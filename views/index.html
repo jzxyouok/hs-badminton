@@ -1,28 +1,28 @@
-<div class="home-flash"><img src="images/banner-img.png" alt="" class="f-res-img"></div>
+<div class="home-flash animated2 zoomIn "><img src="images/banner-img.png" alt="" class="f-res-img"></div>
 <div class="home-function">
   <div class="container12">
-    <div class="grid4">
+    <div class="grid4 animated zoomInDown">
       <button class="btn" ng-click="sign()"><i class="fa fa-calendar-check-o"></i>场馆签到</button>
     </div>
-    <div class="grid4">
+    <div class="grid4 animated07 zoomInDown">
       <button class="btn btn-primary"><i class="fa fa-search"></i>预定查询</button>
     </div>
-    <div class="grid4">
+    <div class="grid4 animated2 zoomInDown">
       <button class="btn"  ng-click="actUsers()"><i class="fa fa-book"></i>活动名单</button>
     </div>
   </div>
 </div>
 <div class="bookable" ng-show="bookdisable==null">
-  <div class="home-title">
+  <div class="home-title  animated3 slideInLeft">
     <span class="f-fr s-color-blue">{{today|date:'MM月dd日'}} 星期{{daysOfWeek}}</span>预定时间列表
   </div>
   <form class="home-list">
     <ul>
-      <li ng-repeat="time in times" ng-click="chooseTime(time)"><input type="radio" apply-type="{{time.applyType}}" ng-checked="choose.id==time.id" value="{{time.id}}" name="optionsRadios">{{time.desc}}</li>
+      <li  class="animated{{16+$index}} slideInLeft" ng-repeat="time in times" ng-click="chooseTime(time)"><input type="radio" apply-type="{{time.applyType}}" ng-checked="choose.id==time.id" value="{{time.id}}" name="optionsRadios">{{time.desc}}</li>
     </ul>
     <div class="fixed-bottom">
-      <button class="btn btn-default" ng-disabled="choose==null" ng-click="choose=null;" ng-class="{'btn-primary':choose!=null}">清除已选</button>
-      <button class="btn btn-primary" ng-disabled="choose==null" ng-click="book(choose)">预定</button>
+      <button class="btn btn-default  animated16 slideInRight" ng-disabled="choose==null" ng-click="choose=null;" ng-class="{'btn-primary':choose!=null}">清除已选</button>
+      <button class="btn btn-primary  animated17 slideInRight" ng-disabled="choose==null" ng-click="book(choose)">预定</button>
     </div>
   </form>
 </div>
