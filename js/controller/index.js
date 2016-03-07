@@ -1,11 +1,12 @@
 ;(function(){
+  var week=['日','一','二','三','四','五','六']
   app.controller('index',function($scope,$http,API){
     
     ////////////////////////
     //根据访客进入的时间判断是否显示预订界面 //
     ////////////////////////
     $scope.today=new Date();
-    $scope.daysOfWeek=$scope.today.getDay()==0?7:$scope.today.getDay();
+    $scope.daysOfWeek=week[$scope.today.getDay()];
 
     /**
      * 跳转到活动列表页面
@@ -63,7 +64,11 @@
         $scope.book=function(time){
           if(time){
             API.book(time.id,function(data){
-              window.location.href="#/?done"
+              if(data.return_msg=="今天不是会员日,不能报名"){
+                alert(data.return_msg);
+              }else{
+                window.location.href="#/?done"
+              }
             })
           }else{
             alert("请选择一个时间段后再提交!");
