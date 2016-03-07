@@ -8,6 +8,7 @@
  * 2.0 @Page
  *   2.1 @Page-sign
  *   2.2 @Page-sign-state
+ * 3.0 @animate
  *        
  */
 
@@ -70,9 +71,12 @@
 	line-height: 60px;
 	font-weight: 500;
 }
-
 .home-list .fixed-bottom .btn:first-child{
 	border-right: 1px #fff solid;
+}
+.home-bookdisable{
+  text-align: center;
+  padding-top: 30px;
 }
 
 /* 2.1 @Page-sign */
@@ -138,6 +142,18 @@
 	line-height: 60px;
 	font-weight: 500;
 }
+div.no-data{
+  background: #F0F0F2;
+  border-top: 2px solid #06CDF0;
+  padding: 10px;
+}
+td i.user-icon {
+  background-color: #06CDF0;
+  padding: 7px;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 22px;
+}
 
 /* 2.2 @Page-sign-state */
 
@@ -153,7 +169,7 @@
   line-height: 100px;
   text-align: center;
   width: 100px;
-  margin-top: -100px;
+  margin-top: 30%;
 }
 .page-state .txt-tips{
 	padding: 0 30px;
@@ -161,113 +177,97 @@
 	line-height: 24px;
 	color: #666;
 	font-weight: 500;
-
 }
 .page-state i.fa-check{
 	background: #02b4e7;
 }
-.page-state i.fa-info{
+.page-state i.fa-exclamation{
 	background: #f59b18;
 }
-
-button[disabled],button[disabled]:hover, button[disabled]:focus, button[disabled]:active, button[disabled].active {
+button[disabled],
+button[disabled]:hover,
+button[disabled]:focus,
+button[disabled]:active,
+button[disabled].active {
 	background: #b4b4b4;
 }
 
-.bookdisable{
-	text-align: center;
-    padding-top: 30px;
-}
-
-div.no-data{
-	background: #F0F0F2;
-    border-top: 2px solid #06CDF0;
-    padding: 10px;
-}
-
-td i.user-icon {
-    background-color: #06CDF0;
-    padding: 7px;
-    color: #fff;
-    border-radius: 50%;
-    font-size: 22px;
-}
-
+/* @animate */
 .animated{
   -webkit-animation-duration:0.5s;
   animation-duration:0.5s;
   -webkit-animation-fill-mode:both;
-  animation-fill-mode:both
+  animation-fill-mode:both;
 }
 .animated06{
   -webkit-animation-duration:0.6s;
   animation-duration:0.6s;
   -webkit-animation-fill-mode:both;
-  animation-fill-mode:both
+  animation-fill-mode:both;
 }
 .animated07{
   -webkit-animation-duration:0.7s;
   animation-duration:0.7s;
   -webkit-animation-fill-mode:both;
-  animation-fill-mode:both
+  animation-fill-mode:both;
 }
 .animated08{
   -webkit-animation-duration:0.8s;
   animation-duration:0.8s;
   -webkit-animation-fill-mode:both;
-  animation-fill-mode:both
+  animation-fill-mode:both;
 }
 .animated09{
   -webkit-animation-duration:0.9s;
   animation-duration:0.9s;
   -webkit-animation-fill-mode:both;
-  animation-fill-mode:both
+  animation-fill-mode:both;
 }
 .animated2{
   -webkit-animation-duration:1s;
   animation-duration:1s;
   -webkit-animation-fill-mode:both;
-  animation-fill-mode:both
+  animation-fill-mode:both;
 }
 .animated3{
   -webkit-animation-duration:1.5s;
   animation-duration:1.5s;
   -webkit-animation-fill-mode:both;
-  animation-fill-mode:both
+  animation-fill-mode:both;
 }
 .animated16{
   -webkit-animation-duration:1.6s;
   animation-duration:1.6s;
   -webkit-animation-fill-mode:both;
-  animation-fill-mode:both
+  animation-fill-mode:both;
 }
 .animated17{
   -webkit-animation-duration:1.7s;
   animation-duration:1.7s;
   -webkit-animation-fill-mode:both;
-  animation-fill-mode:both
+  animation-fill-mode:both;
 }
 .animated18{
   -webkit-animation-duration:1.8s;
   animation-duration:1.8s;
   -webkit-animation-fill-mode:both;
-  animation-fill-mode:both
+  animation-fill-mode:both;
 }
 .animated19{
   -webkit-animation-duration:1.9s;
   animation-duration:1.9s;
   -webkit-animation-fill-mode:both;
-  animation-fill-mode:both
+  animation-fill-mode:both;
 }
 .animated4{
   -webkit-animation-duration:2s;
   animation-duration:2s;
   -webkit-animation-fill-mode:both;
-  animation-fill-mode:both
+  animation-fill-mode:both;
 }
 .animated20{
   -webkit-animation-duration:2.1s;
   animation-duration:2.1s;
   -webkit-animation-fill-mode:both;
-  animation-fill-mode:both
+  animation-fill-mode:both;
 }

@@ -20,7 +20,7 @@
      */
     $scope.sign=function(){
       API.sign(function(data){
-        if(data.return_msg=="活动未开始，请稍后再签到"||data.return_msg=="您没报名或没报名成功"){
+        if(data.return_code!=0){
           window.location.href='#sign-notbegin/'+data.return_msg;
         }else{
           window.location.href='#sign-success/'+data.return_msg;
@@ -64,7 +64,7 @@
         $scope.book=function(time){
           if(time){
             API.book(time.id,function(data){
-              if(data.return_msg=="今天不是会员日,不能报名"){
+              if(data.return_code!=0){
                 alert(data.return_msg);
               }else{
                 window.location.href="#/?done"
