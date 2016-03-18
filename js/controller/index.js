@@ -39,7 +39,8 @@
            */
           $scope.cancelSignUp=function(){
             API.cancelSignUp(function(data){
-              $location.path( "/" );
+              // $location.path( "/" );
+              window.location.href="#/?cancel"
 
               alert("您的报名已经取消,可以重新开始预订了.");
             })
@@ -66,7 +67,8 @@
               if(data.return_code!=0){
                 alert(data.return_msg);
               }else{
-                $location.path( "/?done")
+                // $location.path( "/")
+                window.location.href="#/?done"
               }
             })
           }else{
