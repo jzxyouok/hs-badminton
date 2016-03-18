@@ -1,7 +1,6 @@
 ;(function(){
   var week=['日','一','二','三','四','五','六']
-  app.controller('index',function($scope,$http,API){
-    
+  app.controller('index',function($scope,$http,API,$location){
     ////////////////////////
     //根据访客进入的时间判断是否显示预订界面 //
     ////////////////////////
@@ -12,7 +11,7 @@
      * 跳转到活动列表页面
      */
     $scope.actUsers=function(){
-     window.location.href='#act-users/1';
+     $location.path( '/act-users/1');
     }
 
     /**
@@ -21,9 +20,9 @@
     $scope.sign=function(){
       API.sign(function(data){
         if(data.return_code!=0){
-          window.location.href='#sign-notbegin/'+data.return_msg;
+          $location.path( '/sign-notbegin/'+data.return_msg);
         }else{
-          window.location.href='#sign-success/'+data.return_msg;
+          $location.path( '/sign-success/'+data.return_msg);
         }
       })
     }
@@ -40,7 +39,7 @@
            */
           $scope.cancelSignUp=function(){
             API.cancelSignUp(function(data){
-              window.location.href="#/?redo"
+              $location.path( "/" );
 
               alert("您的报名已经取消,可以重新开始预订了.");
             })
@@ -67,7 +66,7 @@
               if(data.return_code!=0){
                 alert(data.return_msg);
               }else{
-                window.location.href="#/?done"
+                $location.path( "/?done")
               }
             })
           }else{

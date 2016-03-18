@@ -18,9 +18,6 @@
             .when('/act-users/:placeNo', {
                 controller: 'actUsers',
                 templateUrl: 'views/act-users.html'
-            })
-            .otherwise({
-                redirectTo: '/'
             });
     })
 

@@ -1,12 +1,12 @@
 ;(function(){
-  app.controller('actUsers',function($scope,$http,API,$routeParams){
+  app.controller('actUsers',function($scope,$http,API,$routeParams,$location){
 
     $scope.index=function(){
-      window.location.href="#/"
+      $location.path("/")
     }
 
     $scope.choosePlace=function(placeNo){
-      window.location.href="#/act-users/"+placeNo;
+      $location.path("/act-users/"+placeNo);
     }
 
     $scope.placeIcon=['fa-reddit-alien','fa-modx','fa-mortar-board','fa-rocket'];
